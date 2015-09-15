@@ -20,6 +20,7 @@ import javax.swing.border.EmptyBorder;
 import org.apache.log4j.PropertyConfigurator;
 
 import it.edro.classes.Renamer;
+import java.awt.Font;
 
 public class Interface {
 
@@ -62,7 +63,7 @@ public class Interface {
 	 */
 	private void initialize() {
 		try {
-			UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+			UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
 		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
 				| UnsupportedLookAndFeelException e) {
 			// TODO Auto-generated catch block
@@ -74,12 +75,12 @@ public class Interface {
 		frmMoonp.setResizable(false);
 		frmMoonp.setIconImage(Toolkit.getDefaultToolkit().getImage(Interface.class.getResource("/com/sun/javafx/webkit/prism/resources/mediaPlayDisabled.png")));
 		frmMoonp.setTitle("Moonp3");
-		frmMoonp.setBounds(100, 100, 458, 291);
+		frmMoonp.setBounds(100, 100, 530, 380);
 		frmMoonp.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmMoonp.getContentPane().setLayout(null);
 		
 		progressBar = new JProgressBar();
-		progressBar.setBounds(6, 236, 440, 19);
+		progressBar.setBounds(6, 321, 508, 19);
 		frmMoonp.getContentPane().add(progressBar);
 		
 		btnRetag = new JButton("Retag");
@@ -87,7 +88,7 @@ public class Interface {
 			public void actionPerformed(ActionEvent arg0) {
 			}
 		});
-		btnRetag.setBounds(356, 197, 90, 28);
+		btnRetag.setBounds(424, 282, 90, 28);
 		frmMoonp.getContentPane().add(btnRetag);
 		
 		btnRename = new JButton("Rename");
@@ -95,11 +96,15 @@ public class Interface {
 			public void actionPerformed(ActionEvent e) {
 				if (chooser == null)
 					textArea.append("\n Nessuna directory scelta\n");
-				else
-					Renamer.main(chooser.getSelectedFile(), textArea);
+				else{
+					if (chooser.getSelectedFile() == null)
+						textArea.append("\n Nessuna directory scelta\n");
+					else
+						Renamer.main(chooser.getSelectedFile(), textArea);
+				}
 			}
 		});
-		btnRename.setBounds(356, 158, 90, 28);
+		btnRename.setBounds(424, 243, 90, 28);
 		frmMoonp.getContentPane().add(btnRename);
 		
 		btnStartBoth = new JButton("Start Both");
@@ -108,7 +113,7 @@ public class Interface {
 				
 			}
 		});
-		btnStartBoth.setBounds(356, 119, 90, 28);
+		btnStartBoth.setBounds(424, 204, 90, 28);
 		frmMoonp.getContentPane().add(btnStartBoth);
 		
 		//Serve per prendere la directory
@@ -129,19 +134,19 @@ public class Interface {
 			    }
 			}
 		});
-		btnBrowse.setBounds(357, 11, 89, 23);
+		btnBrowse.setBounds(425, 12, 89, 23);
 		frmMoonp.getContentPane().add(btnBrowse);
 
 		textArea = new JTextArea();
+		textArea.setFont(new Font("Verdana", Font.PLAIN, 12));
 		textArea.setEditable(false);
 		textArea.setBounds(6, 10, 322, 215);
-		textArea.setText("- Selezionare la cartella che contiene gli mp3\n");
+		textArea.setText(" Selezionare la cartella che contiene gli mp3\n");
 		textArea.setLineWrap(true);
-//		frmMoonp.getContentPane().add(textArea);
 		
 		scrollPane = new JScrollPane(textArea);
 		scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-		scrollPane.setBounds(6, 10, 322, 215);
+		scrollPane.setBounds(6, 10, 408, 299);
 		frmMoonp.getContentPane().add(scrollPane);
 		
 	}
