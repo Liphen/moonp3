@@ -1,0 +1,11 @@
+DEBUG (it.edro.classes.Renamer) â?? Renamer iniziato
+INFO (it.edro.classes.Renamer) â?? Sto cercando il file numero 1 con il nome: selectorwindow.log
+INFO (it.edro.classes.Renamer) â?? Sto cercando il file numero 2 con il nome: selectorwindow.log.1
+INFO (it.edro.classes.Renamer) â?? Sto cercando il file numero 3 con il nome: vbox-ssl-cacertificate.crt
+INFO (it.edro.classes.Renamer) â?? Sto cercando il file numero 4 con il nome: VBoxSVC.log
+INFO (it.edro.classes.Renamer) â?? Sto cercando il file numero 5 con il nome: VBoxSVC.log.1
+INFO (it.edro.classes.Renamer) â?? Sto cercando il file numero 6 con il nome: VBoxSVC.log.2
+INFO (it.edro.classes.Renamer) â?? Sto cercando il file numero 7 con il nome: VBoxSVC.log.3
+INFO (it.edro.classes.Renamer) â?? Sto cercando il file numero 8 con il nome: VirtualBox.xml
+INFO (it.edro.classes.Renamer) â?? Sto cercando il file numero 9 con il nome: VirtualBox.xml-prev
+DEBUG (it.edro.classes.Renamer) â?? Renamer finito
