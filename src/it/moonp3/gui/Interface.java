@@ -1,4 +1,4 @@
-package it.edro.gui;
+package it.moonp3.gui;
 
 import java.awt.EventQueue;
 
@@ -19,7 +19,8 @@ import javax.swing.border.EmptyBorder;
 
 import org.apache.log4j.PropertyConfigurator;
 
-import it.edro.classes.Renamer;
+import it.moonp3.classes.Renamer;
+
 import java.awt.Font;
 
 public class Interface {
